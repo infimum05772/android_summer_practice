@@ -1,6 +1,6 @@
 # android_summer_practice
 <img src="images/img.png" width="250"></img>  
-*main screen*
+*main screen*  
 <img src="images/img_1.png" width="250"></img>  
 answer: hex color with ff opacity value  
 button changes color to the resulting  
