@@ -1,8 +1,8 @@
 # android_summer_practice
-![img.png](images/img.png)  
+<img src="images/img.png" width="500"></img>
 *main screen*
-![img_1.png](images/img_1.png)  
+<img src="images/img_1.png" width="500"></img>
 answer: hex color with ff opacity value  
 button changes color to the resulting  
-![img_2.png](images/img_2.png)  
+<img src="images/img_2.png" width="500"></img>
 if validation fails, a message is displayed  
