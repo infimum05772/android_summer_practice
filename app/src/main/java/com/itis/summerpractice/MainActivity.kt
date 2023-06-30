@@ -24,30 +24,30 @@ class MainActivity : AppCompatActivity() {
         }
         val answerTextView = findViewById<TextView>(R.id.answer)
         startButton = findViewById(R.id.button)
-            startButton?.setOnClickListener {
-            val name = findViewById<EditText>(R.id.name).text.toString()
-            if (name.isEmpty() || name.length > maxNameLength){
-                answerTextView.text = excMsg
-                return@setOnClickListener
-            }
-            val age = findViewById<EditText>(R.id.age).text.toString()
-            if (age.isEmpty() || Integer.parseInt(age) >= maxAge || Integer.parseInt(age) <= 0){
-                answerTextView.text = excMsg
-                return@setOnClickListener
-            }
-            val height = findViewById<EditText>(R.id.height).text.toString()
-            if (height.isEmpty() || Integer.parseInt(height) >= maxHeight || Integer.parseInt(height) <= 0){
-                answerTextView.text = excMsg
-                return@setOnClickListener
-            }
-            val weight = findViewById<EditText>(R.id.weight).text.toString()
-            if (weight.isEmpty() || Integer.parseInt(weight) >= maxWeight || Integer.parseInt(weight) <= 0){
-                answerTextView.text = excMsg
-                return@setOnClickListener
-            }
-            answer = "#ff" + getNamePart(name) + getAgePart(age) + getHeightWeightPart(height, weight)
-            startButton!!.setBackgroundColor(Color.parseColor(answer))
-            answerTextView.text = "Answer: $answer"
+        startButton?.setOnClickListener {
+        val name = findViewById<EditText>(R.id.name).text.toString()
+        if (name.isEmpty() || name.length > maxNameLength){
+            answerTextView.text = excMsg
+            return@setOnClickListener
+        }
+        val age = findViewById<EditText>(R.id.age).text.toString()
+        if (age.isEmpty() || Integer.parseInt(age) >= maxAge || Integer.parseInt(age) <= 0){
+            answerTextView.text = excMsg
+            return@setOnClickListener
+        }
+        val height = findViewById<EditText>(R.id.height).text.toString()
+        if (height.isEmpty() || Integer.parseInt(height) >= maxHeight || Integer.parseInt(height) <= 0){
+            answerTextView.text = excMsg
+            return@setOnClickListener
+        }
+        val weight = findViewById<EditText>(R.id.weight).text.toString()
+        if (weight.isEmpty() || Integer.parseInt(weight) >= maxWeight || Integer.parseInt(weight) <= 0){
+            answerTextView.text = excMsg
+            return@setOnClickListener
+        }
+        answer = "#ff" + getNamePart(name) + getAgePart(age) + getHeightWeightPart(height, weight)
+        startButton!!.setBackgroundColor(Color.parseColor(answer))
+        answerTextView.text = "Answer: $answer"
         }
     }
     fun getNamePart(string: String): String{
