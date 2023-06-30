@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">SummerPractice</string>
+    <string name="app_name_1">I (don\'t) hate Android Studio</string>
+    <string name="start">START</string>
+    <string name="name">name</string>
+    <string name="description">Enter the following data and find out what HEX color you are!</string>
+    <string name="height">height</string>
+    <string name="html_colors">HEX colors</string>
+    <string name="weight">weight</string>
+    <string name="age">age</string>
+    <string name="defval">defval</string>
 </resources>
