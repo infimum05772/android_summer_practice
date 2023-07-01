@@ -22,26 +22,26 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState != null){
             answer = savedInstanceState.getString("ANS")
         }
-        val answerTextView = findViewById<TextView>(R.id.answer)
-        startButton = findViewById(R.id.button)
+        val answerTextView = findViewById<TextView>(R.id.tv_answer)
+        startButton = findViewById(R.id.btn_start)
         startButton?.setOnClickListener {
-        val name = findViewById<EditText>(R.id.name).text.toString()
+        val name = findViewById<EditText>(R.id.et_name).text.toString()
         if (name.isEmpty() || name.length > maxNameLength){
             answerTextView.text = excMsg
             return@setOnClickListener
         }
-        val age = findViewById<EditText>(R.id.age).text.toString()
-        if (age.isEmpty() || Integer.parseInt(age) >= maxAge || Integer.parseInt(age) <= 0){
+        val age = findViewById<EditText>(R.id.et_age).text.toString().toIntOrNull()
+        if (age == null || age >= maxAge || age <= 0){
             answerTextView.text = excMsg
             return@setOnClickListener
         }
-        val height = findViewById<EditText>(R.id.height).text.toString()
-        if (height.isEmpty() || Integer.parseInt(height) >= maxHeight || Integer.parseInt(height) <= 0){
+        val height = findViewById<EditText>(R.id.et_height).text.toString().toIntOrNull()
+        if (height == null || height >= maxHeight || height <= 0){
             answerTextView.text = excMsg
             return@setOnClickListener
         }
-        val weight = findViewById<EditText>(R.id.weight).text.toString()
-        if (weight.isEmpty() || Integer.parseInt(weight) >= maxWeight || Integer.parseInt(weight) <= 0){
+        val weight = findViewById<EditText>(R.id.et_weight).text.toString().toIntOrNull()
+        if (weight == null || weight >= maxWeight || weight <= 0){
             answerTextView.text = excMsg
             return@setOnClickListener
         }
@@ -62,16 +62,13 @@ class MainActivity : AppCompatActivity() {
         val strRes = (res % mod).toString(16)
         return if (strRes.length < 2) "0$strRes" else strRes
     }
-    fun getAgePart(string: String): String{
-        val num = Integer.parseInt(string)
+    fun getAgePart(num: Int): String{
         val res = ((num * num) % 256).toString(16)
         return if  (res.length < 2) "0$res" else res
     }
 
-    fun getHeightWeightPart(height: String, weight: String): String{
-        val h = Integer.parseInt(height)
-        val w = Integer.parseInt(weight)
-        val res = ((h*h + w*w) % 256).toString(16)
+    fun getHeightWeightPart(height: Int, weight: Int): String{
+        val res = ((height*height + weight*weight) % 256).toString(16)
         return if  (res.length < 2) "0$res" else res
     }
 

@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_start"
         android:layout_width="160dp"
         android:layout_height="80dp"
         android:layout_marginTop="32dp"
@@ -16,13 +16,13 @@
         android:fontFamily="@font/martian_mono_light"
         android:text="@string/start"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/answer"
+        app:layout_constraintBottom_toTopOf="@+id/tv_answer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weight" />
+        app:layout_constraintTop_toBottomOf="@+id/et_weight" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/et_name"
         android:layout_width="256dp"
         android:layout_height="50dp"
         android:ems="12"
@@ -31,10 +31,10 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline4" />
+        app:layout_constraintTop_toBottomOf="@id/fields_guideline" />
 
     <TextView
-        android:id="@+id/description"
+        android:id="@+id/tv_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -42,13 +42,13 @@
         android:fontFamily="@font/martian_mono_light"
         android:text="@string/description"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/guideline3"
+        app:layout_constraintBottom_toBottomOf="@id/desc_guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/height"
+        android:id="@+id/et_height"
         android:layout_width="256dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
@@ -58,22 +58,22 @@
         android:hint="@string/height"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age" />
+        app:layout_constraintTop_toBottomOf="@+id/et_age" />
 
     <TextView
-        android:id="@+id/header"
+        android:id="@+id/tv_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/martian_mono_light"
         android:text="@string/html_colors"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintBottom_toTopOf="@+id/tv_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/weight"
+        android:id="@+id/et_weight"
         android:layout_width="256dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
@@ -83,10 +83,10 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/height" />
+        app:layout_constraintTop_toBottomOf="@+id/et_height" />
 
     <EditText
-        android:id="@+id/age"
+        android:id="@+id/et_age"
         android:layout_width="256dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
@@ -96,24 +96,24 @@
         android:hint="@string/age"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/desc_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.31" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/fields_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.35" />
 
     <TextView
-        android:id="@+id/answer"
+        android:id="@+id/tv_answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -121,6 +121,6 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_start" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
