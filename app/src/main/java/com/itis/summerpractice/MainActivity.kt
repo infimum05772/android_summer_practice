@@ -56,19 +56,22 @@ class MainActivity : AppCompatActivity() {
         var x = 1
         val mod = 256
         for (element in text){
-            res += (x * element.code) % mod
-            x *= 2
+            res += (x * element.code * element.code) % mod
+            x *= element.code
         }
         val strRes = (res % mod).toString(16)
         return if (strRes.length < 2) "0$strRes" else strRes
     }
     fun getAgePart(string: String): String{
-        val res = ((Integer.parseInt(string) * 13) % 256).toString(16)
+        val num = Integer.parseInt(string)
+        val res = ((num * num) % 256).toString(16)
         return if  (res.length < 2) "0$res" else res
     }
 
     fun getHeightWeightPart(height: String, weight: String): String{
-        val res = (((Integer.parseInt(height) + Integer.parseInt(weight)) * 13) % 256).toString(16)
+        val h = Integer.parseInt(height)
+        val w = Integer.parseInt(weight)
+        val res = ((h*h + w*w) % 256).toString(16)
         return if  (res.length < 2) "0$res" else res
     }
 
