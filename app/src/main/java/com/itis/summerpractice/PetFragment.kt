@@ -16,7 +16,7 @@ class PetFragment : Fragment(R.layout.fragment_pet) {
         binding?.run {
             antisettingsButton.setOnClickListener {
                 findNavController().navigate(R.id.action_petFragment_to_antisettingsFragment,
-                    ColorFragment.createBundle()
+                    createBundle()
                 )
             }
             ivPet.setOnClickListener {

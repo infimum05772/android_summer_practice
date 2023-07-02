@@ -15,7 +15,7 @@ class NotesFragment : Fragment(R.layout.fragment_notes) {
         binding?.run {
             antisettingsButton.setOnClickListener {
                 findNavController().navigate(R.id.action_notesFragment_to_antisettingsFragment,
-                    ColorFragment.createBundle()
+                    createBundle()
                 )
             }
         }
