@@ -3,10 +3,13 @@ package com.itis.summerpractice
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.RequestManager
 import com.itis.summerpractice.databinding.ItemUndertailCharacterBinding
 
 class UndertailCharacterAdapter(
-    private var list: List<UndertailCharacter>
+    private var list: List<UndertailCharacter>,
+    private var glide: RequestManager,
+    private val onItemClick: (UndertailCharacter) -> Unit
 ): RecyclerView.Adapter<UndertailCharacterItem>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -16,7 +19,7 @@ class UndertailCharacterAdapter(
             LayoutInflater.from(parent.context),
             parent,
             false
-        )
+        ), glide, onItemClick
     )
 
     override fun getItemCount(): Int {
