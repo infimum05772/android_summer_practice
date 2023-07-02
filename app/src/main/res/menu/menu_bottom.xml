@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainFragment"
+        android:icon="@drawable/baseline_home_24"
+        android:title="main"
+        />
+    <item
+        android:id="@+id/clickerFragment"
+        android:icon="@drawable/baseline_mouse_24"
+        android:title="clicker"
+        />
+    <item
+        android:id="@+id/notesFragment"
+        android:icon="@drawable/baseline_edit_note_24"
+        android:title="notes"
+        />
+    <item
+        android:id="@+id/colorFragment"
+        android:icon="@drawable/baseline_color_lens_24"
+        android:title="colors"
+        />
+    <item
+        android:id="@+id/petFragment"
+        android:icon="@drawable/baseline_pets_24"
+        android:title="pet"
+        />
+</menu>
