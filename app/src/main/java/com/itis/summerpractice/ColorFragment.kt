@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.itis.summerpractice.databinding.FragmentColorBinding
 
 class ColorFragment : Fragment(R.layout.fragment_color) {
@@ -14,6 +15,11 @@ class ColorFragment : Fragment(R.layout.fragment_color) {
         binding = FragmentColorBinding.bind(view)
 
         binding?.run {
+            antisettingsButton.setOnClickListener {
+                findNavController().navigate(R.id.action_colorFragment_to_antisettingsFragment,
+                    createBundle()
+                )
+            }
             circleButton.setOnClickListener {
                 val red = etRed.text.toString().toIntOrNull()
                 val green = etGreen.text.toString().toIntOrNull()
@@ -47,5 +53,13 @@ class ColorFragment : Fragment(R.layout.fragment_color) {
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
+    }
+    companion object {
+        fun createBundle(): Bundle{
+            val bundle = Bundle()
+            bundle.putString("MESSAGE", "color fragment")
+            bundle.putInt("ACTION", R.id.action_antisettingsFragment_to_colorFragment)
+            return bundle
+        }
     }
 }
