@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.itis.summerpractice.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_antisettingsFragment"
+            app:destination="@id/antisettingsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/clickerFragment"
+        android:name="com.itis.summerpractice.ClickerFragment"
+        android:label="fragment_clicker"
+        tools:layout="@layout/fragment_clicker" >
+        <action
+            android:id="@+id/action_clickerFragment_to_antisettingsFragment"
+            app:destination="@id/antisettingsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.itis.summerpractice.NotesFragment"
+        android:label="fragment_notes"
+        tools:layout="@layout/fragment_notes" >
+        <action
+            android:id="@+id/action_notesFragment_to_antisettingsFragment"
+            app:destination="@id/antisettingsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/colorFragment"
+        android:name="com.itis.summerpractice.ColorFragment"
+        android:label="fragment_color"
+        tools:layout="@layout/fragment_color" >
+        <action
+            android:id="@+id/action_colorFragment_to_antisettingsFragment"
+            app:destination="@id/antisettingsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/petFragment"
+        android:name="com.itis.summerpractice.PetFragment"
+        android:label="fragment_pet"
+        tools:layout="@layout/fragment_pet" >
+        <action
+            android:id="@+id/action_petFragment_to_antisettingsFragment"
+            app:destination="@id/antisettingsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/antisettingsFragment"
+        android:name="com.itis.summerpractice.AntisettingsFragment"
+        android:label="AntisettingsFragment"
+        tools:layout="@layout/fragment_antisettings">
+        <action
+            android:id="@+id/action_antisettingsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_antisettingsFragment_to_colorFragment"
+            app:destination="@id/colorFragment" />
+        <action
+            android:id="@+id/action_antisettingsFragment_to_petFragment"
+            app:destination="@id/petFragment" />
+        <action
+            android:id="@+id/action_antisettingsFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
+        <action
+            android:id="@+id/action_antisettingsFragment_to_clickerFragment"
+            app:destination="@id/clickerFragment" />
+    </fragment>
+</navigation>
